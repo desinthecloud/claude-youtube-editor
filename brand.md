@@ -1,24 +1,26 @@
-# Brand — the house style the example video ships with
+# Brand — Des in the Cloud
 
-> Style contract for every long-form video this repo produces. Every step-2+ skill (TSX overlays,
+> Style contract for every video this repo produces. Every step-2+ skill (TSX overlays,
 > full-screen animations, diagrams, SFX) reads this file so all videos feel like one channel.
-> **This is the look the `video-1` example was built in — keep it, tweak it, or replace it wholesale
-> with your own brand.** If you change it, also update `remotion/src/brand.ts` (the same tokens, as code).
-> A calm, premium, modern **AI-studio** aesthetic (reference polish: Linear / Vercel / Anthropic).
+> Set by `/brand-setup`. Keep `remotion/src/brand.ts` and `remotion/src/fonts.ts` in sync.
+> A warm, confident look: berry and plum on cream. Honest, direct, funny. Never hype.
 
 ## 1. Identity & voice
 
-- **Positioning:** modern **AI-studio** aesthetic — light, airy, whitespace, soft depth, tasteful
-  motion. Reference polish: **Linear / Vercel / Anthropic**. Premium and calm, never loud or cluttered.
-- **Voice:** direct, confident, generous (free resources), personal (the presenter in the loop). No
-  hype-filler. On-screen text deliberately **avoids em-dashes** — keep that in overlays too.
-- **Energy for video:** clean and premium, not MrBeast-loud. Motion is *tasteful*, not bouncy/cartoonish.
-  (No hard offset shadows, thick black borders, or sticker-pop "Memphis" looks — that style is retired.)
+- **Positioning:** the blunt, funny friend who already survived the bootcamp, the certs and the layoff.
+  The real path into tech and AI product, out loud. Audience: Black women in tech and women over 40
+  pivoting careers. Warm, personal, with receipts.
+- **Voice:** blunt, practical, sarcastic without bashing, warm, real. Short lines. Contrast hooks.
+  First person. Name the hard part, then give the plan. On-screen text avoids em-dashes.
+  Never use hype words: game-changing, lightning fast, dominating, level up, pure efficiency.
+- **Energy for video:** warm and confident. Quick, punchy cuts with a soft landing. Not MrBeast-loud,
+  not corporate-flat. Motion stays tasteful: no cartoon bounce, no hard offset shadows.
 
 ## 2. Logo / wordmark
 
-- **Wordmark:** your channel wordmark — set it once and reuse it as the brand lockup (the example
-  renders a two-tone wordmark with the middle word in the indigo accent, in Space Grotesk, tight).
+- **Wordmark:** **Des in the Cloud**, three parts: `Des` / `in the` / `Cloud`. The middle "in the"
+  renders in the berry accent, in Poppins, tight. In `brand.ts` the spaces sit inside the values (`'Des '`, `'in the'`, `' Cloud'`) because the parts render with no gap. Sign-off line: "Keep going. See you in the next one."
+  Handles: YouTube @Desinthecloud, TikTok @des_in_the_cloud, Instagram and Threads desinthecloud.
 - No standalone logo mark is required (a favicon is enough). Use the wordmark as the lockup.
 - Drop any portrait / brand-bumper assets you want to reuse under `media/library/` (e.g. a `logos/`
   or `faces/` entry) and reference them from shots via `staticFile('library/...')`.
@@ -27,28 +29,32 @@
 
 | Role | Name | Hex | Use in video |
 |---|---|---|---|
-| **Primary accent** | indigo | `#6366F1` | key words, highlights, active state, progress, CTAs, the accent word |
-| Secondary accent | violet | `#9b7cc4` | pairs with indigo in gradients, secondary emphasis |
-| Success / positive | teal | `#4db8a8` | "free", confirms, checkmarks, positive callouts |
-| Success alt | green | `#4ecdc4` | teal companion for gradients/success |
-| Warn / attention | yellow | `#f5d76e` | highlight sweeps, "watch this", attention pops |
-| Danger / contrast | pink | `#e8879f` | errors, "the hard/expensive way", negative contrast |
-| Ink (text/dark) | ink | `#1a1a2e` | primary text on light; base dark bg |
-| Muted text | muted | `#6b6b7b` | secondary text, captions |
-| Surface (paper) | paper | `#fffef7` | light full-screen bg, cards |
-| Surface 2 (cream) | cream | `#faf8f5` | alt light band |
+| **Primary accent** | berry | `#C2185B` | key words, highlights, active state, CTAs, the "in the" in the wordmark |
+| Secondary accent | plum-violet | `#7B3FA0` | pairs with berry in gradients, secondary emphasis |
+| Success / positive | teal | `#1F8A7D` | "free", confirms, checkmarks, positive callouts |
+| Success alt | teal light | `#2BB3A3` | teal companion for gradients and success |
+| Warn / attention | amber | `#F2B84B` | highlight sweeps, "watch this", attention pops |
+| Danger / contrast | red | `#D64545` | errors, "the hard or expensive way", negative contrast |
+| Ink (text/dark) | deep plum | `#2B1B3D` | primary text on light; base dark bg |
+| Muted text | muted plum | `#6B5A78` | secondary text, captions |
+| Surface (paper) | warm cream | `#FFF9F3` | light full-screen bg, cards |
+| Surface 2 (cream) | cream | `#F8EFE6` | alt light band |
+| Line | sand | `#EADFD3` | 1px borders on light |
+
+Contrast on paper: ink 15.15:1, muted 5.98:1, accent 5.62:1. Paper on accent 5.62:1, so small text
+on a berry chip is safe.
 
 **Dark UI / terminal scale** (GitHub-ink — for Claude Code terminal & code mockups):
 `#0d1117` (bg) · `#161b22` (panel) · `#30363d` (border) · `#8b949e` (dim text) · `#c9d1d9` (text).
 
-**Signature gradient:** indigo → violet → teal (`#6366F1 → #9b7cc4 → #4db8a8`). Used for dividers and
+**Signature gradient:** berry → plum → teal (`#C2185B → #7B3FA0 → #1F8A7D`). Used for dividers and
 full-screen animated backgrounds.
 
 ## 4. Typography (3-font system)
 
 | Role | Font | Weights | Use |
 |---|---|---|---|
-| **Display / headlines** | **Space Grotesk** | 500 / 600 / 700 | titles, big statements, section cards, the wordmark |
+| **Display / headlines** | **Poppins** | 500 / 600 / 700 / 800 | titles, big statements, section cards, the wordmark |
 | **Body / UI** | **Inter** | 400 / 500 / 600 | subtitles, labels, body text, lower-third detail |
 | **Code / mono** | **JetBrains Mono** | 400 / 500 / 700 | terminal mockups, code, prompts, file paths, tech labels |
 | **Claude wordmark serif** | **Source Serif 4** (`FONT_EDITORIAL`) | 600 | "Claude …" wordmark clones (Claude Editor, Claude Code) — the Copernicus stand-in |
@@ -61,21 +67,21 @@ Headlines tight tracking; body normal; mono for anything literally code/terminal
 ## 5. Shape & depth
 
 - **Radius:** ~14px (cards/panels), pills fully rounded. Terminal/code windows: ~10px with a title bar.
-- **Depth:** **soft shadows** (e.g. `0 8px 32px rgba(0,0,0,.10)`), 1px light borders. Airy.
+- **Depth:** **soft shadows** (e.g. `0 8px 32px rgba(43,27,61,.10)`), 1px light borders. Airy.
 - **Never:** hard offset shadows (`4px 4px 0 #000`), 3px black borders, sticker/pop look → retired.
 - **Window chrome** (browser/terminal mockups): rounded panel, top bar with 3 traffic-light dots
   + a mono label; content on the dark ink scale.
 
-## 6. Motion language  ← *calm & premium*
+## 6. Motion language  ← *warm & confident*
 
-Translated to video (Remotion, 60fps):
+Translated to video (Remotion, 25fps):
 
-- **Entrances:** fade + rise. `opacity 0→1` and `translateY 24px→0` over ~14 frames (~0.23s), ease-out
+- **Entrances:** fade + rise. `opacity 0→1` and `translateY 24px→0` over ~6 frames (~0.24s), ease-out
   (or spring: damping 200, mass 0.8, stiffness 120). Calm, no overshoot/bounce.
-- **Exits:** fade + fall ~10 frames.
-- **Emphasis:** indigo highlight/underline wipe behind a key word over ~8 frames; scale pop max 1.03.
-- **Stagger:** 3–4 frames between list items / lines.
-- **Backgrounds:** slow drifting indigo/violet/teal gradient blobs + a faint dotted grid, 8–20s loops.
+- **Exits:** fade + fall ~4 frames.
+- **Emphasis:** berry highlight/underline wipe behind a key word over ~4 frames; scale pop max 1.03.
+- **Stagger:** 1–2 frames between list items / lines.
+- **Backgrounds:** slow drifting berry/plum/teal gradient blobs + a faint dotted grid, 8–20s loops.
 - **Feel:** premium, restrained, "Linear/Anthropic." No spins, no elastic, no hard snaps.
 
 **Hook-beat exception (first ~10s + intro cutaways — video-5 creator feedback).** The opening
@@ -95,8 +101,9 @@ no gag.
 
 ## 7. Video delivery specs
 
-- **Canvas:** 3840×2160 (4K), **60 fps** — match the master cut's frame rate (the `video-1` example
-  master is 4K60). (Design at 1920×1080 ×2 scale is fine; composite at 4K.)
+- **Canvas:** 3840×2160 (4K), **25 fps** — matches the camera. The `video-1` example shots were
+  authored at 60 fps, so any frame-count timing copied from them needs rescaling (about ÷2.4).
+  (Design at 1920×1080 ×2 scale is fine; composite at 4K.)
 - **Safe margins:** keep text ≥ 5% from edges (title-safe ~7.5%). Lower-thirds in the bottom ~12–18% band,
   left-aligned to the margin.
 - **Talking head is CENTER-framed.** Overlays live in the **top and bottom bands**, or become
@@ -120,17 +127,17 @@ no gag.
 
 ## 9. Locked decisions & still-open
 
-- **Brand = a modern AI-studio look** — indigo accent, 3-font system. ✓
-- **Motion = calm & premium** — restrained fade-and-rise, no bounce (§6). ✓
+- **Brand = Des in the Cloud** — berry accent on warm cream, deep plum ink, Poppins/Inter/JetBrains Mono. ✓
+- **Motion = warm & confident** — quick fade-and-rise, soft landing, no bounce (§6). ✓
 - **Framing = centered** — overlays top/bottom band or full-screen cutaway; never cover center. ✓
-- **SFX taste (step 4):** subtle premium accents. See §10.
-
-*(Swap any of these for your own brand's decisions — this is the example channel's contract.)*
+- **SFX taste (step 4):** subtle accents under the voice. See §10. Still open: punchier or not.
 
 ## 10. Sound design — SFX
 
 Same energy as the motion: **calm/premium, felt-not-heard.** Reference feel is Linear / Anthropic /
 Vercel product sound, NOT MrBeast-loud. SFX are seasoning on the edit, never the show.
+
+SFX are on for this channel: tasteful, under the voice, never wall-to-wall.
 
 **Choose every cue by its FUNCTION** (the pro-editor model — 3+1 foundational sounds do the heavy
 lifting; thousands of files are a trap). Ask what the beat needs:

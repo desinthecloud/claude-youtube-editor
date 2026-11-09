@@ -1,35 +1,34 @@
 // Video brand tokens (see /brand.md). Import these in every shot
 // so all videos stay consistent; change a value here and every shot updates.
 //
-// The COLORS / EASINGS / RADIUS below are the house style the example shots were
-// built in — a calm, premium look you are free to keep. BRAND, right below, is
-// YOUR identity and ships as a placeholder on purpose. Run `/brand-setup` to
-// rewrite both this file and /brand.md to your own channel in one pass.
+// Des in the Cloud: berry + plum on warm cream. Set by /brand-setup.
+// Keep this file, /brand.md and fonts.ts in sync.
 import { Easing } from 'remotion';
 
 // Channel identity. Any shot that puts your name on screen reads it from here,
 // so one edit re-brands every video you have ever made in this repo.
 export const BRAND = {
   // The wordmark, split in three so the MIDDLE part renders in the accent color.
-  // e.g. ['Build', 'With', 'AI'] renders the word "With" in indigo.
+  // e.g. ['Des', 'in the', 'Cloud'] renders "in the" in berry.
+  // Parts are concatenated with no gap, so the spaces live inside the values.
   // Use ['Acme', 'Labs', ''] for a two-part mark.
-  wordmark: ['Your', 'Channel', ''] as readonly string[],
-  signoff: 'See you in the next one',
+  wordmark: ['Des ', 'in the', ' Cloud'] as readonly string[],
+  signoff: 'Keep going. See you in the next one.',
 } as const;
 
 export const COLORS = {
   // roles
-  accent: '#6366F1', // indigo — primary
-  accent2: '#9b7cc4', // violet — secondary
-  signal: '#4db8a8', // teal — success / "free"
-  signalAlt: '#4ecdc4', // teal-green companion
-  warn: '#f5d76e', // yellow — attention
-  danger: '#e8879f', // pink — contrast / error
-  ink: '#1a1a2e', // primary text on light
-  muted: '#6b6b7b', // secondary text
-  paper: '#fffef7', // light surface / bg
-  cream: '#faf8f5', // alt light band
-  line: '#e7e3da', // 1px borders on light
+  accent: '#C2185B', // berry — primary
+  accent2: '#7B3FA0', // plum-violet — secondary
+  signal: '#1F8A7D', // teal — success / "free"
+  signalAlt: '#2BB3A3', // teal companion
+  warn: '#F2B84B', // amber — attention
+  danger: '#D64545', // red — contrast / error
+  ink: '#2B1B3D', // deep plum — primary text on light
+  muted: '#6B5A78', // secondary text
+  paper: '#FFF9F3', // warm cream — light surface / bg
+  cream: '#F8EFE6', // alt light band
+  line: '#EADFD3', // 1px borders on light
   // dark UI / terminal scale (GitHub-ink)
   d900: '#0d1117',
   d800: '#161b22',
@@ -38,14 +37,14 @@ export const COLORS = {
   d300: '#c9d1d9',
 } as const;
 
-// signature gradient: indigo -> violet -> teal
+// signature gradient: berry -> plum -> teal
 export const GRADIENT = `linear-gradient(120deg, ${COLORS.accent}, ${COLORS.accent2}, ${COLORS.signal})`;
 
 export const RADIUS = { card: 16, panel: 14, window: 10, pill: 999 } as const;
 
 export const SHADOW = {
-  soft: '0 8px 32px rgba(26,26,46,0.10)',
-  card: '0 10px 40px rgba(26,26,46,0.08)',
+  soft: '0 8px 32px rgba(43,27,61,0.10)',
+  card: '0 10px 40px rgba(43,27,61,0.08)',
 } as const;
 
 // Calm, premium easings (confirmed brand motion). Use these — never Easing.out(...) wrappers.
